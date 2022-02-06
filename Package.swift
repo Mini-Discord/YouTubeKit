@@ -5,9 +5,9 @@ import PackageDescription
 
 let package = Package(
     name: "YouTubeKit",
-    /*platforms: [
+    platforms: [
         .macOS(.v12), .iOS(.v15), .watchOS(.v8), .tvOS(.v15)
-    ],*/
+    ],
     products: [
         // Products define the executables and libraries a package produces, and make them visible to other packages.
         .library(
@@ -16,7 +16,7 @@ let package = Package(
     ],
     dependencies: [
         // Dependencies declare other packages that this package depends on.
-         //.package(url: "https://github.com/Mini-Discord/YouTubeKit", from: "1.0.0"),
+         .package(url: "https://github.com/Mini-Discord/YouTubeKit", from: "1.0.0"),
     ],
     targets: [
         // Targets are the basic building blocks of a package. A target can define a module or a test suite.
@@ -26,6 +26,6 @@ let package = Package(
             dependencies: []),
         .testTarget(
             name: "YouTubeKitTests",
-            dependencies: [/*"YouTubeKit"*/]),
+            dependencies: ["YouTubeKit"]),
     ]
 )
